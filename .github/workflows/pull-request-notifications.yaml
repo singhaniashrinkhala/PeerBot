@@ -16,3 +16,4 @@ jobs:
           SLACK_TITLE: 'Pull request'
           SLACK_USERNAME: 'shrinkhala singhania'
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
