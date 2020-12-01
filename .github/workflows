@@ -12,8 +12,8 @@ jobs:
         uses: rtCamp/action-slack-notify@master
         env:
           SLACK_CHANNEL: hackday
-          SLACK_MESSAGE: 'Please review on https://github.com/YOUR_PATH/YOUR_REPO_NAME/pull/${{ env.pull_number}}'
+          SLACK_MESSAGE: 'Please review on https://github.com/singhaniashrinkhala/PeerBot/pull/${{ env.pull_number}}'
           SLACK_TITLE: 'Pull request'
-          SLACK_USERNAME: 'Gittan'
+          SLACK_USERNAME: 'shrinkhala singhania'
           SLACK_WEBHOOK: ${{ secrets.https://hooks.slack.com/services/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
  }}
