@@ -11,9 +11,9 @@ jobs:
       - name: Slack Notification
         uses: rtCamp/action-slack-notify@master
         env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
           SLACK_CHANNEL: hackday
           SLACK_MESSAGE: 'Please review on https://github.com/singhaniashrinkhala/PeerBot/pull/${{ env.pull_number}}'
           SLACK_TITLE: 'Pull request'
           SLACK_USERNAME: 'shrinkhala singhania'
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
