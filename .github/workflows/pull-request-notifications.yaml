@@ -7,7 +7,12 @@ jobs:
     name: Slack Notification
     runs-on: ubuntu-latest
     steps:
+      - name: ACTIONS_ALLOW_UNSECURE_COMMANDS
+        id: ACTIONS_ALLOW_UNSECURE_COMMANDS
+        run: echo 'ACTIONS_ALLOW_UNSECURE_COMMANDS=true' >> $GITHUB_ENV
+        
       - run: echo ::set-env name=pull_number::$(jq --raw-output .pull_request.number $GITHUB_EVENT_PATH)
+      
       - name: Slack Notification
         uses: rtCamp/action-slack-notify@master
         env:
